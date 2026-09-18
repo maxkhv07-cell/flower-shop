@@ -15,33 +15,7 @@ buttons.forEach(function(button) {
 
         const name = button.dataset.name;
         const price = button.dataset.price;
-
-        // Визначаємо фото за назвою товару
-        let image = "";
-
-        if (name === "Букет «Нежность». 201 роза") {
-            image = "201rose.jpg";
-        }
-
-        if (name === "Букет «Алексин». 11 роз") {
-            image = "11rose.jpg";
-        }
-
-        if (name === "Букет «Софи спрей». 15 роз") {
-            image = "rose15.jpg";
-        }
-
-        if (name === "Букет «Алексин спрей ред». 11 роз") {
-            image = "red11rose.webp";
-        }
-
-        if (name === "Букет «Lovely sun»") {
-            image = "sun.jpg";
-        }
-
-        if (name === "Букет «Гранд»") {
-            image = "grand.jpg";
-        }
+        const image = button.dataset.image;
 
         const existingItem = cart.find(function(item) {
     return item.name === name;
